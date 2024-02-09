@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  web:
+    image: myphp
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8081:80"
+  mysql:
+    image: mysql:8.0.35
+    environment:
+      MYSQL_ROOT_PASSWORD: "123456"
+      MYSQL_DATABASE: bdd_hoteleria
+      MYSQL_PASSWORD: 1234656
+    ports:
+      - "3307:3306"
